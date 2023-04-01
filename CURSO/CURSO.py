@@ -33,8 +33,8 @@ bool # Verdadero o Falso
 <= # Menor o igual
 
 # Cierres de contenido 
-{} #
-() # 
+{} # Diccionarios
+() # Listas y Tuplas
 [] # 
 
 # Operadores Booleanos

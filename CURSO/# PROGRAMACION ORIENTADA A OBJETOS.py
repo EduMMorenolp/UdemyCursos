@@ -75,6 +75,6 @@ class tuplas_diccionarios: #se puede pasar valores como tublas y diccionarios
         self.tuplas = tuplas
         self.diccionario = diccionarios
      
-     def mostrar(self):
+    def mostrar(self):
         print(f"Persona : {self.altura} {self.base} {self.tuplas} {self.diccionario}")
         
