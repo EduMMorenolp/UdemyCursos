@@ -1,0 +1,13 @@
+h1, h2, p, div{
+    color: crimson;
+    text-align: center;
+}
+
+#Unico{
+    color :black;
+}
+
+.clase{
+    color :blueviolet;
+    text-shadow: 100cqmax;
+}
