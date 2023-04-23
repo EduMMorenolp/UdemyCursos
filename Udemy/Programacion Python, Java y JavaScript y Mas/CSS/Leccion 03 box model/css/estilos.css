@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    color: #e63946;
+}
+div{
+    padding: 10px 15px 5px 3px;
+    border: 0px solid #457b9d;
+    margin: 20px;
+    background-color: #f1faee;
+    width: 300px;
+	outline: 10px solid #a8dadc;
+	outline-offset: 10px;
+    box-sizing: border-box;
+}
+.caja2{
+    padding: 10px 15px 5px 3px;
+    border: 1px solid #457b9d;
+    margin: 30px;
+    background-color: #f1faee;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+.caja3{
+    padding: 10px 15px 5px 3px;
+    border: 1px solid #457b9d;
+    margin: 20px;
+    background-color: #f1faee;
+    max-width: 300px;
+    box-sizing: border-box;
+}
