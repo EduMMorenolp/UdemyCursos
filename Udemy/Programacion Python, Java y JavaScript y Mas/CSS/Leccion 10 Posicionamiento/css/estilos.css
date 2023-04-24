@@ -1,0 +1,58 @@
+h1{
+    text-align: center;
+    color: crimson;
+}
+div{
+    position: relative;
+    border: 2px solid black;
+    padding: 5px;
+    top: 120px;
+    left: 30px;
+}
+h2{
+    /* Pocision Estatica no se mueve */
+    position: static;
+    top:100px;
+    left:50px;
+    max-width: 50%;
+    border: 3px solid firebrick;
+    margin: auto;
+}
+h3{
+    /* Pocision relativa se mueve, pero no el bloque */
+    position: relative;
+    top:50px;
+    left:50px;
+    max-width: 50%;
+    border: 3px solid firebrick;
+    margin: auto;
+    
+}
+h4{
+    /* Pocision ajustada a la pantalla de manera fija*/
+    position: fixed;
+    top: 10px;
+    left: 500px;
+    /*max-width: 50%;*/
+    border: 3px solid firebrick;
+    /* margin: auto; */
+}
+
+.div_hijo{
+    /* Pocision Estatica no se mueve */
+    position: absolute;
+    padding: 0px;
+    bottom: 0px;
+    right: 0px;
+    border: 3px solid firebrick;
+}
+
+h6{
+    /* Pocision pegajosa, se adiere donde indique de los costados*/
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    /*max-width: 50%;*/
+    border: 3px solid green;
+    /* margin: auto; */
+}
