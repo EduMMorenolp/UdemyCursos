@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title id="titulo" >Ejemplo DOM con JavaScript</title>
+</head>
+
+<body>
+    
+    <h1 id="cabecero"> Ejemplo Dom </h1>
+    <p id="parrafo"> Saludos Mundo! </p>
+    <p id="parrafo2"> Otro Parrafo </p>
+
+<script>
+    // El script hay que ponerlo despues de los elementos a utilizar
+    let cabecero = document.getElementById("cabecero").innerHTML;
+    console.log("valor cabecero : " + cabecero);
+    let parrafo = document.getElementById("parrafo");
+    console.log("valor parrafo : " + parrafo.innerHTML);
+    parrafo.innerHTML = " Parrafo Modificado .... ";
+    console.log("Hola Mundo! desde JavaScript");
+    let titulo = document.getElementById("titulo");
+    titulo.innerHTML = " Nuevo Titulo ";
+    console.log("Titulo : " + titulo.innerHTML);
+    
+    let parrafos = document.getElementsByTagName("p");
+    console.log(" N° de Parrafos : " + parrafos.length )
+    for (let i=0 ; i < parrafos.length; i ++){
+        console.log("i: " + i + " =" + parrafos[i].innerHTML)
+    }
+
+
+</script>
+
+</body>
+</html>
+
