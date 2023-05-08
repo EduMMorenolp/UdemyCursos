@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title id="titulo" >Ejemplo DOM con JavaScript</title>
+    <style>
+        .azul{
+            color: blue
+        }
+    </style>
 </head>
 
 <body>
@@ -11,6 +16,7 @@
     <h1 id="cabecero"> Ejemplo Dom </h1>
     <p id="parrafo"> Saludos Mundo! </p>
     <p id="parrafo2"> Otro Parrafo </p>
+    <p class="azul"> Parrafo Color Azul </p>
 
 <script>
     // El script hay que ponerlo despues de los elementos a utilizar
@@ -23,6 +29,8 @@
     let titulo = document.getElementById("titulo");
     titulo.innerHTML = " Nuevo Titulo ";
     console.log("Titulo : " + titulo.innerHTML);
+
+    // Elementos getElementsByTagName
     
     let parrafos = document.getElementsByTagName("p");
     console.log(" N° de Parrafos : " + parrafos.length )
@@ -30,6 +38,25 @@
         console.log("i: " + i + " =" + parrafos[i].innerHTML)
     }
 
+    // Elementos getElementsClassName
+
+    let parrafoazul = document.getElementsByClassName("azul");
+    console.log(" N° de Parrafos Azules : " + parrafoazul.length )
+    for (let i=0 ; i < parrafoazul.length; i ++){
+        console.log("i: " + i + " =" + parrafoazul[i].innerHTML)
+    }
+
+    // Funcion querySelectorAll()
+
+    let parrafoazules = document.querySelectorAll("p.azul");
+    console.log(" N° de Parrafos Azules : " + parrafoazules.length )
+    for (let i=0 ; i < parrafoazules.length; i ++){
+        console.log("i: " + i + " =" + parrafoazules[i].innerHTML)
+    }
+    
+    // Formularios Con JS
+
+    
 
 </script>
 

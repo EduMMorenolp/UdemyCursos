@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Eventos en DOM con JS</title>
+</head>
+<body onload="entrar()">
+    <h1 onclick="cambiarTexto(this)"> Manejo de Eventos en DOM con JS</h1>
+    <h2 id="titulo2"> Manejo de Eventos en DOM con JS</h1>
+    <h2 id="titulo3"> Titulo 3 Mostrar en Lista</h1>   
+    <br/>
+    <div id="mostrar"> Lista </div>
+    <br/>
+    Nombre : <input type="text" onchange="convertir(this)"/>
+        
+    <h2 id="titulo4" onmouseleave ="azul(this)" onmouseover="rojo(this)"  > Titulo 4 cambia de color </h1>
+    <h2 id="titulo4" onmousedown ="azul(this)" onmouseup="rojo(this)"  > Titulo 5 cambia de color </h1>
+    <h2 id="titulo4" onclick="verde(this)"> Titulo 6 cambia de color con click </h1>
+        
+    <br/>
+    Nombre2 : <input type="text" onfocus ="cambiar(this)" onblur="regresar(this)"/>    
+    <br/>
+    Nombre3 : <input type="text" id="nombre3">
+    Apellido3 : <input type="text" id="apellido3">
+    <br/>
+    Nombre4 : <input type="text" id="nombre4">   
+    <script>
+        
+        function cambiarTexto(titulo){
+            console.log(titulo);
+            console.log(titulo.innerHTML);
+            titulo.innerHTML = "Cambiando el Titulo"
+            console.log(titulo.innerHTML);
+        }
+        document.getElementById("titulo2").onclick = cambiarTexto2;
+        document.getElementById("titulo3").onclick = cambiarTexto3;
+        // Funciones CallBack 
+        function cambiarTexto2(){
+            document.getElementById("titulo2").innerHTML = "Nuevo Titulo";
+        }
+        
+        function cambiarTexto3(){
+            document.getElementById("mostrar").innerHTML = "Nuevo Titulo en DIV";
+        }
+
+        // Evento onload
+
+        function entrar(){
+            alert("Entrando a la pagina web");
+            let texto = "";
+            if (navigator.cookieEnabled){
+                texto = " Cookies estan habilitadas";
+            }else{
+                texto = "Cookies estan Inhabilitadas";
+            }
+            document.getElementById("mostrar").innerHTML = texto;
+        }
+
+        // Evento onChange 
+
+        function convertir(nombreInput){
+            nombreInput.value = nombreInput.value.toUpperCase();
+        }
+
+        // Evento onmouseover y onmouseout (el out no me funciono use leave)
+        // Aclaracion : on mouse significa Pasar el Raton por encima. 
+
+        function rojo(titulo4){
+            titulo4.style.color = "red";
+        }
+        function azul(titulo4){
+            titulo4.style.color = "blue";
+        }
+
+        // Eventos onmousedown y onmouseup 
+
+        function verde(titulo4){
+            titulo4.style.color = "green";
+        }
+
+        // Eventos onfocus y onblur 
+        // Cuando estamos en el lugar hace algo cuando salimos hace otra cosa (?)
+
+        function cambiar(elementoInput){
+            elementoInput.style.background = "yellow"
+        }
+        function regresar(elementoInput){
+            elementoInput.style.background = "white"
+        }
+
+        // Metodo addEventListener 
+
+        document.getElementById("nombre3").addEventListener("focus", cambiar2)
+        document.getElementById("nombre3").addEventListener("blur", regresar2)
+
+        document.getElementById("apellido3").addEventListener("focus", cambiar2)
+        document.getElementById("apellido3").addEventListener("blur", regresar2)
+        function cambiar2(evento){
+            let componente = evento.target;
+            componente.style.background = "violet";
+        }
+        function regresar2(evento){
+            evento.target.style.background = "white";
+        }
+
+        // Funciones Flecha Con Evento. 
+
+        document.getElementById("nombre4").addEventListener("focus", (evento)=>{
+            evento.target.style.background = "pink";
+        })
+        document.getElementById("nombre4").addEventListener("blur", (evento)=>{
+            evento.target.style.background = "white";
+        })
+
+        
+
+    </script>
+</body>
+</html>

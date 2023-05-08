@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo Formulario con JavaScript</title>
+  </head>
+  <body>
+    <h1 id="titulo">Manejo de DOM con JS</h1>
+    <form id="Formulario">
+      Nombre: <input type="text" name="nombre" value="Juan" />
+      <br />
+      Apellido: <input type="text" name="apellido" value="Perez" />
+      <br />
+    </form>
+    <button onclick="mostrarValores()">Mostrar</button>
+    <button onclick="BorrarTodo()">Borrando</button>
+    <div id="valores"></div>
+    <br />
+
+    <img id="imagen" height="150" src="img/00037-350403892.png" />
+    <br />
+    <button onclick="cambiarImagen()">Cambiando Imagen</button>
+    <br />
+    <button onclick="cambiarTitulo()">Cambiando Titulo</button>
+
+    <br />
+    <button onclick="cambiarTitulocolor()">Cambiando Color Titulo</button>
+
+    <script>
+      function mostrarValores() {
+        let Formulario = document.forms["Formulario"];
+        let texto = "";
+        for (let elemento of Formulario) {
+          texto += elemento.value + "<br/>";
+        }
+        document.getElementById("valores").innerHTML = texto;
+        console.log(texto);
+        let nombre = Formulario["nombre"];
+        let apellido = Formulario["apellido"];
+        let texto2 = nombre.value + " " + apellido.value;
+        console.log(texto2);
+      }
+      function BorrarTodo() {
+        document.write("Borrando todo");
+      }
+
+      // Uso de documentWrite
+
+      document.write(" <br/> Borrando todo ? NAAA ");
+
+      // Cambio de Contenido en el DOM
+
+      function cambiarTitulo() {
+        document.getElementById("titulo").innerHTML = "Nuevo Titulo DOM";
+      }
+
+      // Cambio de Valor de los Atributos en DOM HTML
+
+      function cambiarImagen() {
+        document.getElementById("imagen").src = "img\00052-4017684629.png";
+        // Se Cambiar pero no se muestra y no se por que...
+      }
+
+      //Cambio de Estilos CSS con JS
+      function cambiarTitulocolor() {
+        document.getElementById("titulo").style.color = "red"
+      }
+     
+
+    </script>
+  </body>
+</html>
