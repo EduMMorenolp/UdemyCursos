@@ -1,1 +1,11 @@
-<p>persona works!</p>
+<p>persona works!
+    Nombre: {{ nombre }},
+    Apellido: {{ apellido }},
+    Edad: {{ getEdad() + 1 }}
+</p>
+
+<div (keyup)="0">
+    <label>Repetidor </label>
+    <input #entrada />
+    {{ entrada.value }}
+</div>

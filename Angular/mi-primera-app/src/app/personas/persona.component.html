@@ -2,9 +2,20 @@
     <div class="row">
         <div class="col">
             <h1> Listado de Personas </h1>
-            <h4><app-persona></app-persona></h4>
-            <h2><app-persona></app-persona></h2>
-            <h2><app-persona></app-persona></h2>
+            <button class="btn btn-primary" [disabled]="deshabilitar"
+            (click)="agregarPersona()">Agregar Persona</button>
+            <p>{{ mensaje }}</p>
+            
+            <h5><app-persona></app-persona></h5>
+
+            <!--<label>Titulo Persona</label>
+            <input type="text" class="form-control" (input)="modificarTitulo($event)">
+            {{ titulo }} -->
+
+            <label>Titulo Persona</label>
+            <input type="text" class="form-control" [(ngModel)]="titulo">
+            <p> {{titulo}} </p>
+
         </div>
     </div>
 </div>
