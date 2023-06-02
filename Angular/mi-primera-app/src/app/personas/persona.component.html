@@ -4,7 +4,11 @@
             <h1> Listado de Personas </h1>
             <button class="btn btn-primary" [disabled]="deshabilitar"
             (click)="agregarPersona()">Agregar Persona</button>
-            <p>{{ mensaje }}</p>
+            <p *ngIf="mostrar; else sinPersona">{{ mensaje }} con el titulo de {{ titulo }}</p>
+            
+            <ng-template #sinPersona>
+                <p> {{ mensaje }} </p>
+            </ng-template>
             
             <h5><app-persona></app-persona></h5>
 
