@@ -32,7 +32,7 @@ export class FormularioComponent {
        this.apellidoInput.nativeElement.value );
     //this.personaCreada.emit(persona1);
     this.PersonaServicio.personaAgregada(persona1);
-    this.logginService.enviaMensajeConsola("Enviamos persona nombre : " + persona1.nombre + " apellido : " + persona1.apellido)
+    //this.logginService.enviaMensajeConsola("Enviamos persona nombre : " + persona1.nombre + " apellido : " + persona1.apellido)
 
   }
 }

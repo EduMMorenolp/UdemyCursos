@@ -1,0 +1,103 @@
+<div class="cabecero">
+  <div class="presupuesto">
+      <div class="presupuesto_titulo">
+          Presupuesto Disponible:
+      </div>
+      
+      <div class="presupuesto_valor">+ 2,345.64</div>
+      
+      <div class="presupuesto_ingreso limpiarEstilos">
+          <div class="presupuesto_ingreso--texto">Ingresos</div>
+          <div class="right">
+              <div class="presupuesto_ingreso--valor">+ 4,300.00</div>
+              <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
+          </div>
+      </div>
+      
+      <div class="presupuesto_egreso limpiarEstilos">
+          <div class="presupuesto_egreso--text">Egresos</div>
+          <div class="right limpiarEstilos">
+              <div class="presupuesto_egreso--valor">- 1,954.36</div>
+              <div class="presupuesto_egreso--porcentaje">45%</div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<form>
+  <div class="agregar">
+      <div class="agregar_contenedor">
+          <select class="agregar_tipo">
+              <option value="ing" selected>+</option>
+              <option value="egr">-</option>
+          </select>
+          <input type="text" class="agregar_descripcion" placeholder="Agregar Descripción">
+          <input type="number" class="agregar_valor" placeholder="Valor">
+          <button class="agregar_btn"><i class="ion-ios-checkmark-outline"></i></button>
+      </div>
+  </div>
+</form>
+
+  
+  <div class="contenedor limpiarEstilos">
+      <div class="ingreso">
+          <h2 class="ingreso_titulo">Ingresos</h2>
+             
+              
+              <div class="elemento limpiarEstilos">
+                  <div class="elemento_descripcion">Salario</div>
+                  <div class="right limpiarEstilos">
+                      <div class="elemento_valor">+ 2,100.00</div>
+                      <div class="elemento_eliminar">
+                          <button class="elemento_eliminar--btn">
+                              <i class="ion-ios-close-outline"></i>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="elemento limpiarEstilos">
+                  <div class="elemento_descripcion">Venta coche</div>
+                  <div class="right limpiarEstilos">
+                      <div class="elemento_valor">+ 1,500.00</div>
+                      <div class="elemento_eliminar">
+                          <button class="elemento_eliminar--btn"><i class="ion-ios-close-outline"></i></button>
+                      </div>
+                  </div>
+              </div>
+              
+      </div>
+      
+      
+      
+      <div class="egreso">
+          <h2 class="egreso_titulo">Egresos</h2>
+             
+              
+              <div class="elemento limpiarEstilos" >
+                  <div class="elemento_descripcion">Renta departamento</div>
+                  <div class="right limpiarEstilos">
+                      <div class="elemento_valor">- 900.00</div>
+                      <div class="elemento_porcentaje">21%</div>
+                      <div class="elemento_eliminar">
+                          <button class="elemento_eliminar--btn"><i class="ion-ios-close-outline"></i></button>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="elemento limpiarEstilos" >
+                  <div class="elemento_descripcion">Ropa</div>
+                  <div class="right limpiarEstilos">
+                      <div class="elemento_valor">- 435.28</div>
+                      <div class="elemento_porcentaje">10%</div>
+                      <div class="elemento_eliminar">
+                          <button class="elemento_eliminar--btn"><i class="ion-ios-close-outline"></i></button>
+                      </div>
+                  </div>
+              </div>
+              
+              
+      </div>
+  </div>
